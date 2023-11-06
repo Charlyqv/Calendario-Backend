@@ -1,2 +1,20 @@
+const express = require('express');
 
-console.log("🚀 ~ file: index.js:3 ~ 'Hola mundo':", 'Hola mundo');
+// Crear servidor de express
+const app = express();
+
+// Rutas
+app.get('/', (req, res) => {
+
+  console.log('Se requiere el /');
+  res.json({
+    ok: true
+  });
+
+})
+
+
+// Escuchar perticiones
+app.listen( 4000, () => {
+  console.log(`Servidor corriendo en puerto ${ 4000 }`);
+})
